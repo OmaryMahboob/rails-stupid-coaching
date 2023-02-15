@@ -1,0 +1,20 @@
+<%# <h1>question: <% @question %>
+<h1>Stupid Coaching</h1>
+<div id=ask class=main>
+  <p> <%= @question %> </p>
+  <p>--you</p>
+</div>
+
+
+<div class=main>
+  <div id=answer class="alert alert-warning" role="alert">
+  <% if @question == "I am going to work" || "i am going to work" %>
+      <strong> Great! good job </strong>
+    <% elsif @question.end_with? ("?")%>
+      <strong> Silly question, get dressed and go to work! </strong>
+    <% else %>
+      <strong>I don't care, get dressed and go to work!</strong>
+  <% end %>
+  <p>--couch</p>
+  </div>
+</div>
